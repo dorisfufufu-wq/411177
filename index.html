@@ -7,20 +7,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Indie+Flower&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #f4eee1;       /* 復古紙張色 */
-            --text-color: #3e3e3e;     /* 炭筆黑 */
-            --accent-color: #5b7065;   /* 植物綠 */
+            --bg-paper: #f4eee1;       /* 復古紙張色 */
+            --text-ink: #3e3e3e;       /* 炭筆黑 */
+            --accent-green: #5b7065;   /* 植物綠 */
             --ink-blue: #4a6fa5;       /* 鋼筆藍 */
-            --secondary-text: #767676; /* 鉛筆灰 */
-            --font-main: 'Crimson Text', serif;
-            --font-hand: 'Indie Flower', cursive;
+            --secondary-pencil: #767676; /* 鉛筆灰 */
+            --font-serif: 'Crimson Text', serif;
+            --font-sketch: 'Indie Flower', cursive;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            /* 關鍵：讓所有邊框帶有手繪的不規則感 */
             border-radius: 255px 15px 225px 15px/15px 225px 15px 255px !important;
         }
 
@@ -29,22 +28,21 @@
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: var(--font-main);
+            background-color: var(--bg-paper);
+            color: var(--text-ink);
+            font-family: var(--font-serif);
             line-height: 1.8;
-            /* 模擬紙張紋理 */
             background-image: radial-gradient(#d3cbb8 0.5px, transparent 0.5px);
             background-size: 24px 24px;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* 導覽列 - 手繪邊條感 */
+        /* 導覽列 */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -55,13 +53,13 @@
             top: 15px;
             left: 3%;
             background: rgba(244, 238, 225, 0.95);
-            border: 2px solid var(--text-color);
+            border: 2px solid var(--text-ink);
             box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
             z-index: 1000;
         }
 
         .logo {
-            font-family: var(--font-hand);
+            font-family: var(--font-sketch);
             font-weight: 700;
             font-size: 1.6rem;
             color: var(--ink-blue);
@@ -75,129 +73,135 @@
 
         .nav-links a {
             text-decoration: none;
-            color: var(--text-color);
-            font-family: var(--font-hand);
-            font-size: 1rem;
-            border-bottom: 1px solid transparent;
-            transition: all 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-color);
-            border-bottom: 2px dashed var(--accent-color);
+            color: var(--text-ink);
+            font-family: var(--font-sketch);
+            font-size: 1.1rem;
+            transition: 0.3s;
         }
 
         /* Hero Section */
         .hero-section {
-            height: 100vh;
+            min-height: 80vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding-top: 80px;
+            padding-top: 120px;
         }
 
         .hero-content h1 {
-            font-family: var(--font-hand);
-            font-size: 4rem;
+            font-family: var(--font-sketch);
+            font-size: 4.5rem;
             margin-bottom: 1rem;
         }
 
         .highlight {
-            color: var(--accent-color);
+            color: var(--accent-green);
             text-decoration: underline wavy var(--ink-blue);
         }
 
         .tagline {
-            font-size: 1.25rem;
-            color: var(--secondary-text);
-            margin-bottom: 2rem;
-            max-width: 600px;
+            font-size: 1.4rem;
+            color: var(--secondary-pencil);
+            margin: 2rem auto;
+            max-width: 700px;
             font-style: italic;
-        }
-
-        /* 按鈕樣式 - 手繪印章感 */
-        .btn {
-            padding: 12px 30px;
-            text-decoration: none;
-            font-family: var(--font-hand);
-            font-weight: 600;
-            margin: 0 10px;
-            display: inline-block;
-            transition: transform 0.2s;
-            border: 2px solid var(--text-color);
-        }
-
-        .btn:hover {
-            transform: scale(1.05) rotate(-1deg);
-        }
-
-        .primary {
-            background-color: var(--text-color);
-            color: var(--bg-color);
-        }
-
-        .secondary {
-            background-color: transparent;
-            color: var(--text-color);
-            border-style: dashed;
         }
 
         /* Section 通用樣式 */
         section {
-            padding: 100px 0;
+            padding: 80px 0;
         }
 
         .section-title {
-            font-family: var(--font-hand);
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
+            font-family: var(--font-sketch);
+            font-size: 2.8rem;
+            margin-bottom: 2.5rem;
             text-align: center;
             color: var(--ink-blue);
         }
 
-        .about-text {
-            font-size: 1.2rem;
-            color: var(--text-color);
-            text-align: center;
-            padding: 40px;
+        /* 關於我：卡片樣式 */
+        .about-card {
             background: rgba(255, 255, 255, 0.4);
-            border: 1px solid #dcd3bc;
+            border: 1.5px solid var(--text-ink);
+            padding: 40px;
+            box-shadow: 10px 10px 0px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
         }
 
-        /* Contact Section */
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
+        .about-card p {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
         }
 
-        .contact-item {
-            font-family: var(--font-hand);
-            color: var(--text-color);
+        /* 技能區塊 */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .skill-item {
+            border: 1px dashed var(--text-ink);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .skill-item h3 {
+            font-family: var(--font-sketch);
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: var(--accent-green);
+        }
+
+        /* TOEFL 成長進度 */
+        .progress-box {
+            background: #fff;
+            border: 1.5px solid var(--text-ink);
+            padding: 30px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .quote {
+            font-family: var(--font-sketch);
+            font-size: 1.5rem;
+            color: var(--secondary-pencil);
+            margin-top: 20px;
+        }
+
+        /* 按鈕 */
+        .btn {
+            padding: 12px 30px;
             text-decoration: none;
-            font-size: 1.2rem;
-            padding: 5px 10px;
-            transition: background 0.3s;
+            font-family: var(--font-sketch);
+            font-weight: 600;
+            margin: 10px;
+            display: inline-block;
+            transition: 0.2s;
+            border: 2px solid var(--text-ink);
         }
 
-        .contact-item:hover {
-            background-color: rgba(91, 112, 101, 0.2);
-            color: var(--accent-color);
+        .btn:hover {
+            transform: translateY(-3px) rotate(1deg);
+            box-shadow: 5px 5px 0px var(--accent-green);
         }
 
-        /* Footer */
+        .primary { background-color: var(--text-ink); color: var(--bg-paper); }
+        .secondary { background-color: transparent; color: var(--text-ink); border-style: dashed; }
+
         .footer {
             text-align: center;
-            padding: 40px;
-            font-family: var(--font-hand);
-            font-size: 0.9rem;
-            color: var(--secondary-text);
+            padding: 60px;
+            font-family: var(--font-sketch);
+            color: var(--secondary-pencil);
             border-top: 1px dashed #dcd3bc;
         }
 
         @media (max-width: 768px) {
-            .hero-content h1 { font-size: 2.5rem; }
+            .hero-content h1 { font-size: 3rem; }
             .nav-links { display: none; }
         }
     </style>
@@ -208,57 +212,92 @@
         <div class="logo">DORIS.</div>
         <ul class="nav-links">
             <li><a href="#hero">首頁</a></li>
-            <li><a href="#about">關於我</a></li>
-            <li><a href="#contact">聯絡方式</a></li>
+            <li><a href="#about">關於</a></li>
+            <li><a href="#skills">技能</a></li>
+            <li><a href="#contact">聯絡</a></li>
         </ul>
     </nav>
 
     <section id="hero" class="hero-section">
-        <div class="hero-content">
-            <h1>Doris <span class="highlight">Fu</span></h1>
-            <p class="tagline">專注於會計資訊系統與數據分析，致力於用技術優化財務決策。</p>
+        <div class="hero-content container">
+            <h1>Doris <span class="highlight">[Your Surname]</span></h1>
+            <p class="tagline">
+                「在精密的會計分錄與靈動的程式碼之間，尋找最完美的平衡點。」
+            </p>
             <div class="hero-btns">
-                <a href="#about" class="btn primary">View Work</a>
-                <a href="#contact" class="btn secondary">Contact Me</a>
+                <a href="#about" class="btn primary">了解更多</a>
+                <a href="#contact" class="btn secondary">與我聊聊</a>
             </div>
         </div>
     </section>
 
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <p class="about-text">
-                你好！我是 Doris。我目前正致力於結合會計專業與資訊系統開發。
-                我擅長透過數據分析挖掘潛在問題，並利用程式技術自動化繁瑣的財務流程。
-                在追求精確的會計邏輯之餘，我也熱衷於探索新技術。
+    <section id="about" class="container">
+        <h2 class="section-title">The Story of Doris</h2>
+        <div class="about-card">
+            <p>
+                你好！我是 Doris，一名穿梭在<strong>會計資訊系統</strong>與<strong>數據分析</strong>領域的探索者。
+                目前就讀於國立台北大學，專注於研究如何利用技術手段來優化繁雜的財務決策流程。
+            </p>
+            <p>
+                對我而言，程式碼不僅是工具，更是一種藝術；而會計則提供了嚴謹的邏輯基礎。
+                當這兩者結合時，我能看見數據背後的真實故事。
+            </p>
+            <p>
+                目前我正積極準備 <strong>TOEFL 考試</strong>，目標是在八月底達成 110 分的挑戰，
+                以此作為邁向國際學術或職涯舞台的墊腳石。
             </p>
         </div>
     </section>
 
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-links">
-                <a href="mailto:your-email@example.com" class="contact-item">Email</a>
-                <a href="https://github.com/" target="_blank" class="contact-item">GitHub</a>
-                <a href="https://linkedin.com/" target="_blank" class="contact-item">LinkedIn</a>
+    <section id="skills" class="container">
+        <h2 class="section-title">My Palette</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <h3>Accounting</h3>
+                <p>財務報表分析、成本會計、稅務規劃與精準審核邏輯。</p>
+            </div>
+            <div class="skill-item">
+                <h3>Technical</h3>
+                <p>HTML/CSS/JS 網頁開發、Python 數據處理、會計資訊系統架構。</p>
+            </div>
+            <div class="skill-item">
+                <h3>Soft Skills</h3>
+                <p>細心敏銳的觀察力、邏輯問題解決能力、多工處理效率。</p>
             </div>
         </div>
     </section>
 
+    <section class="container">
+        <div class="progress-box">
+            <h2 class="section-title" style="font-size: 2.2rem;">Current Challenge</h2>
+            <p style="font-size: 1.3rem;">目標：TOEFL 110 分 </p>
+            <p class="quote">"Dreams don't work unless you do."</p>
+            <p style="margin-top: 15px; color: var(--secondary-pencil);">
+                
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2 class="section-title">Say Hello</h2>
+        <div class="contact-links">
+            <a href="mailto:your-email@example.com" class="btn primary">Email Me</a>
+            <a href="#" class="btn secondary">LinkedIn</a>
+        </div>
+    </section>
+
     <footer class="footer">
-        <p>&copy; 2026 Doris. Built with Simplicity.</p>
+        <p>&copy; 2026 Doris. Designed with heart and vintage dreams.</p>
     </footer>
 
     <script>
-        // 平滑捲動
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     window.scrollTo({
-                        top: target.offsetTop - 70,
+                        top: target.offsetTop - 80,
                         behavior: 'smooth'
                     });
                 }
