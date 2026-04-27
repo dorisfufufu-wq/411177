@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doris | 個人網站</title>
+    <title>Doris Fu | 個人網站</title>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Indie+Flower&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -81,7 +81,7 @@
 
         /* Hero Section */
         .hero-section {
-            min-height: 80vh;
+            min-height: 70vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -91,7 +91,7 @@
 
         .hero-content h1 {
             font-family: var(--font-sketch);
-            font-size: 4.5rem;
+            font-size: 5rem;
             margin-bottom: 1rem;
         }
 
@@ -101,7 +101,7 @@
         }
 
         .tagline {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             color: var(--secondary-pencil);
             margin: 2rem auto;
             max-width: 700px;
@@ -110,66 +110,65 @@
 
         /* Section 通用樣式 */
         section {
-            padding: 80px 0;
+            padding: 60px 0;
         }
 
         .section-title {
             font-family: var(--font-sketch);
             font-size: 2.8rem;
-            margin-bottom: 2.5rem;
+            margin-bottom: 2rem;
             text-align: center;
             color: var(--ink-blue);
         }
 
-        /* 關於我：卡片樣式 */
-        .about-card {
+        /* 內容卡片 */
+        .card {
             background: rgba(255, 255, 255, 0.4);
             border: 1.5px solid var(--text-ink);
             padding: 40px;
-            box-shadow: 10px 10px 0px rgba(0,0,0,0.05);
+            box-shadow: 10px 10px 0px rgba(0,0,0,0.03);
             margin-bottom: 40px;
         }
 
-        .about-card p {
+        .card p {
             font-size: 1.25rem;
             margin-bottom: 1.5rem;
         }
 
-        /* 技能區塊 */
-        .skills-grid {
+        /* 技能網格 */
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-top: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
         }
 
-        .skill-item {
+        .grid-item {
             border: 1px dashed var(--text-ink);
-            padding: 20px;
-            text-align: center;
+            padding: 25px;
         }
 
-        .skill-item h3 {
+        .grid-item h3 {
             font-family: var(--font-sketch);
             font-size: 1.8rem;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             color: var(--accent-green);
         }
 
-        /* TOEFL 成長進度 */
-        .progress-box {
-            background: #fff;
-            border: 1.5px solid var(--text-ink);
-            padding: 30px;
-            margin-top: 30px;
-            text-align: center;
+        /* 學習進度區塊 */
+        .milestone {
+            border-left: 2px solid var(--ink-blue);
+            padding-left: 20px;
+            margin-bottom: 25px;
+            position: relative;
         }
 
-        .quote {
-            font-family: var(--font-sketch);
-            font-size: 1.5rem;
-            color: var(--secondary-pencil);
-            margin-top: 20px;
+        .milestone::before {
+            content: '●';
+            position: absolute;
+            left: -11px;
+            top: 0;
+            color: var(--ink-blue);
+            background: var(--bg-paper);
         }
 
         /* 按鈕 */
@@ -190,7 +189,6 @@
         }
 
         .primary { background-color: var(--text-ink); color: var(--bg-paper); }
-        .secondary { background-color: transparent; color: var(--text-ink); border-style: dashed; }
 
         .footer {
             text-align: center;
@@ -201,7 +199,7 @@
         }
 
         @media (max-width: 768px) {
-            .hero-content h1 { font-size: 3rem; }
+            .hero-content h1 { font-size: 3.5rem; }
             .nav-links { display: none; }
         }
     </style>
@@ -213,81 +211,80 @@
         <ul class="nav-links">
             <li><a href="#hero">首頁</a></li>
             <li><a href="#about">關於</a></li>
-            <li><a href="#skills">技能</a></li>
+            <li><a href="#vision">展望</a></li>
             <li><a href="#contact">聯絡</a></li>
         </ul>
     </nav>
 
     <section id="hero" class="hero-section">
         <div class="hero-content container">
-            <h1>Doris <span class="highlight">[Your Surname]</span></h1>
+            <h1>Doris <span class="highlight">Fu</span></h1>
             <p class="tagline">
-                「在精密的會計分錄與靈動的程式碼之間，尋找最完美的平衡點。」
+                「在精密的分錄與靈動的代碼之間，描繪數據的溫度。」
             </p>
             <div class="hero-btns">
-                <a href="#about" class="btn primary">了解更多</a>
-                <a href="#contact" class="btn secondary">與我聊聊</a>
+                <a href="#about" class="btn primary">探索我的故事</a>
             </div>
         </div>
     </section>
 
     <section id="about" class="container">
         <h2 class="section-title">The Story of Doris</h2>
-        <div class="about-card">
+        <div class="card">
             <p>
-                你好！我是 Doris，一名穿梭在<strong>會計資訊系統</strong>與<strong>數據分析</strong>領域的探索者。
-                目前就讀於國立台北大學，專注於研究如何利用技術手段來優化繁雜的財務決策流程。
+                你好！我是 <strong>Doris Fu</strong>。目前就讀於國立台北大學，主修會計並輔修資訊系統開發。
+                我熱衷於將嚴謹的財務邏輯與現代科技結合，探索如何透過自動化工具提升決策效率。
             </p>
             <p>
-                對我而言，程式碼不僅是工具，更是一種藝術；而會計則提供了嚴謹的邏輯基礎。
-                當這兩者結合時，我能看見數據背後的真實故事。
-            </p>
-            <p>
-                目前我正積極準備 <strong>TOEFL 考試</strong>，目標是在八月底達成 110 分的挑戰，
-                以此作為邁向國際學術或職涯舞台的墊腳石。
+                對我而言，數據不僅是冰冷的數字，而是等待被解讀的語言。透過 Python 數據分析與網頁前端技術，
+                我致力於將複雜的資訊轉化為直觀且具備美感的呈現。
             </p>
         </div>
     </section>
 
     <section id="skills" class="container">
         <h2 class="section-title">My Palette</h2>
-        <div class="skills-grid">
-            <div class="skill-item">
+        <div class="grid">
+            <div class="grid-item">
                 <h3>Accounting</h3>
-                <p>財務報表分析、成本會計、稅務規劃與精準審核邏輯。</p>
+                <p>具備紮實的財務會計基礎，擅長報表分析與成本管理，強調數據背後的邏輯與合規性。</p>
             </div>
-            <div class="skill-item">
-                <h3>Technical</h3>
-                <p>HTML/CSS/JS 網頁開發、Python 數據處理、會計資訊系統架構。</p>
+            <div class="grid-item">
+                <h3>Information</h3>
+                <p>運用 HTML、CSS 與 JavaScript 建構互動體驗，並透過技術優化會計流程與數據呈現。</p>
             </div>
-            <div class="skill-item">
-                <h3>Soft Skills</h3>
-                <p>細心敏銳的觀察力、邏輯問題解決能力、多工處理效率。</p>
+            <div class="grid-item">
+                <h3>Observation</h3>
+                <p>擁有敏銳的觀察力，能從細微之處發現問題，並以解決問題為導向進行跨領域思考。</p>
             </div>
         </div>
     </section>
 
-    <section class="container">
-        <div class="progress-box">
-            <h2 class="section-title" style="font-size: 2.2rem;">Current Challenge</h2>
-            <p style="font-size: 1.3rem;">目標：TOEFL 110 分 </p>
-            <p class="quote">"Dreams don't work unless you do."</p>
-            <p style="margin-top: 15px; color: var(--secondary-pencil);">
-                
-            </p>
+    <section id="vision" class="container">
+        <h2 class="section-title">Future Journey</h2>
+        <div class="card" style="border-style: dashed;">
+            <div class="milestone">
+                <strong>TOEFL Challenge (2026.08)</strong>
+                <p>目前正全力衝刺 TOEFL，目標達成 110 分。我正在強化語法運用的精準度與答題節奏，為未來的國際舞台做準備。</p>
+            </div>
+            <div class="milestone">
+                <strong>Cross-Domain Integration</strong>
+                <p>持續深耕 AI 與會計自動化領域，期望成為能同時理解商業需求與技術實踐的橋樑。目前正專研數據分析工具與自動化腳本開發。</p>
+            </div>
         </div>
     </section>
 
     <section id="contact" class="container">
         <h2 class="section-title">Say Hello</h2>
-        <div class="contact-links">
+        <div style="text-align: center;">
+            <p style="font-size: 1.2rem; margin-bottom: 20px;">歡迎透過以下方式與我交流創意或專業見解：</p>
             <a href="mailto:your-email@example.com" class="btn primary">Email Me</a>
-            <a href="#" class="btn secondary">LinkedIn</a>
+            <a href="#" class="btn" style="border-style: dotted;">LinkedIn</a>
         </div>
     </section>
 
     <footer class="footer">
-        <p>&copy; 2026 Doris. Designed with heart and vintage dreams.</p>
+        <p>&copy; 2026 Doris Fu. Designed with heart and vintage dreams.</p>
     </footer>
 
     <script>
